@@ -6,7 +6,7 @@ import solidJs from "@astrojs/solid-js"
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://raspfloppy.github.io",
-  base: "/",
+  site: "https://raspfloppy.github.io/gabrielmonti.dev",
+  base: "/gabrielmonti.dev",
   integrations: [mdx(), sitemap(), solidJs(), tailwind({ applyBaseStyles: false })],
 })
