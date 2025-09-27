@@ -1,5 +1,13 @@
 import type { Site, Page, Links, Socials } from "@types"
 
+export const WEBSITE = {
+  url: import.meta.env.SITE || "https://raspfloppy.github.io/gabrielmonti.dev",
+  base: import.meta.env.BASE_URL || "/gabrielmonti.dev/",
+  title: "Gabriel Monti",
+  description: "Your site description here",
+} as const;
+
+
 // Global
 export const SITE: Site = {
   TITLE: "Gabriel Monti",
@@ -35,20 +43,20 @@ export const SEARCH: Page = {
 export const LINKS: Links = [
   {
     TEXT: "Home",
-    HREF: "/",
+    HREF: `${WEBSITE.base || "/"}`,
   },
   {
     TEXT: "Blog",
-    HREF: "/blog",
+    HREF: `${WEBSITE.base || "/"}/blog`,
   },
   {
     TEXT: "Projects",
-    HREF: "/projects",
+    HREF: `${WEBSITE.base || "/"}/projects`,
   },
 
   {
     TEXT: "Work",
-    HREF: "/work",
+    HREF: `${WEBSITE.base || "/"}/work`,
   },
 ]
 
