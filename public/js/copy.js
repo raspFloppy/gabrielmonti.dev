@@ -4,7 +4,8 @@ const codeBlocks = document.querySelectorAll('pre:has(code)');
 codeBlocks.forEach((code) => {
   //button icon
   const use = document.createElementNS('http://www.w3.org/2000/svg', 'use');
-  use.setAttribute('href', '/copy.svg#empty');
+  const basePath = document.querySelector('base')?.getAttribute('href') || '/';
+  use.setAttribute('href', `${basePath}copy.svg#empty`);
   const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
   svg.classList.add('copy-svg');
   svg.appendChild(use);
@@ -32,10 +33,11 @@ function copyCode(event) {
   let codeBlock = getChildByTagName(event.currentTarget.parentElement.parentElement, 'CODE')
   navigator.clipboard.writeText(codeBlock.innerText)
   const use = getChildByTagName(getChildByTagName(event.currentTarget, 'svg'), 'use');
-  use.setAttribute('href', '/copy.svg#filled')
+  const basePath = document.querySelector('base')?.getAttribute('href') || '/';
+  use.setAttribute('href', `${basePath}copy.svg#filled`)
   setTimeout(() => {
     if (use) {
-      use.setAttribute('href', '/copy.svg#empty')
+      use.setAttribute('href', `${basePath}copy.svg#empty`)
     }
   }, 100);
 }
