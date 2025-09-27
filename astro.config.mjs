@@ -6,6 +6,7 @@ import solidJs from "@astrojs/solid-js"
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://astro-sphere-demo.vercel.app",
+  site: "https://raspfloppy.github.io/gabrielmonti.dev", // GitHub Pages URL (will redirect to gabrielmonti.dev)
+  base: "/gabrielmonti.dev/", // Repository name for GitHub Pages subpath with trailing slash
   integrations: [mdx(), sitemap(), solidJs(), tailwind({ applyBaseStyles: false })],
 })
