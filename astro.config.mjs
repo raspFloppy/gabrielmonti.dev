@@ -31,20 +31,20 @@ export default defineConfig({
     enabled: true
   },
   redirects: {
-    '/about-me': '/about',
-    '/about-us': '/about',
-    '/contact-me': '/contact',
-    '/contact-us': '/contact',
-    '/privacy': '/privacy-policy',
-    '/posts/mermaid-test': '/posts/mermaid-diagrams',
-    '/posts/mermaid-diagram-test': '/posts/mermaid-diagrams',
-    '/posts/astro-suite-vault-modular-guide': '/posts/obsidian-vault-guide',
-    '/posts/astro-suite-obsidian-vault-guide-astro-modular': '/posts/obsidian-vault-guide',
-    '/projects/obsidian-astro-composer': '/projects/astro-composer',
-    '/docs/api-reference': '/docs/api',
-    '/docs/astro-modular-configuration': '/docs/configuration',
-    '/docs/sourcetree-and-git': '/docs/sourcetree-and-git-setup'
-  },
+  '/about-me': BASE_PATH + '/about',
+  '/about-us': BASE_PATH + '/about',
+  '/contact-me': BASE_PATH + '/contact',
+  '/contact-us': BASE_PATH + '/contact',
+  '/privacy': BASE_PATH + '/privacy-policy',
+  '/posts/mermaid-test': BASE_PATH + '/posts/mermaid-diagrams',
+  '/posts/mermaid-diagram-test': BASE_PATH + '/posts/mermaid-diagrams',
+  '/posts/astro-suite-vault-modular-guide': BASE_PATH + '/posts/obsidian-vault-guide',
+  '/posts/astro-suite-obsidian-vault-guide-astro-modular': BASE_PATH + '/posts/obsidian-vault-guide',
+  '/projects/obsidian-astro-composer': BASE_PATH + '/projects/astro-composer',
+  '/docs/api-reference': BASE_PATH + '/docs/api',
+  '/docs/astro-modular-configuration': BASE_PATH + '/docs/configuration',
+  '/docs/sourcetree-and-git': BASE_PATH + '/docs/sourcetree-and-git-setup'
+},
   image: {
     service: {
       entrypoint: 'astro/assets/services/sharp',
