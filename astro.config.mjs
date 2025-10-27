@@ -19,10 +19,11 @@ import { siteConfig } from './src/config.ts';
 import swup from '@swup/astro';
 
 const DEPLOYMENT_PLATFORM = process.env.DEPLOYMENT_PLATFORM || 'github-pages';
+const BASE_PATH = process.env.BASE_PATH || '/gabrielmonti.dev/';
 
 export default defineConfig({
-  site: siteConfig.site,
-  base: process.env.GITHUB_PAGES_BASE || undefined,
+  site: 'https://raspfloppy.github.io',
+  base: BASE_PATH,
   deployment: {
     platform: DEPLOYMENT_PLATFORM
   },
@@ -70,13 +71,10 @@ export default defineConfig({
       updateHead: true,
       updateBodyClass: false,
       globalInstance: true,
-      plugins: [], // Disable all plugins including scroll
+      plugins: [],
       skipPopStateHandling: (event) => {
-        // ALWAYS skip Swup handling for back/forward navigation
-        // Let the browser handle it naturally
         return true;
       },
-      // Simplified link selector for better compatibility
       linkSelector: 'a[href]:not([data-no-swup]):not([href^="mailto:"]):not([href^="tel:"])'
     })
   ],
