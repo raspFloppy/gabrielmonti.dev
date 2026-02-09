@@ -2,3 +2,17 @@ site_name: Gabriel Monti - Software Engineer
 site_description: Personal blog of Gabriel Monti, a software engineer passionate about technology and programming.
 plugins:
   - blog
+
+theme:
+  name: material
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
