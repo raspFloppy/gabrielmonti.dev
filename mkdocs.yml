@@ -1,5 +1,7 @@
 site_name: Gabriel Monti - Software Engineer
 site_description: Personal blog of Gabriel Monti, a software engineer passionate about technology and programming.
+site_url: https://raspfloppy.github.io/gabrielmonti.dev/
+
 plugins:
   - blog
 
