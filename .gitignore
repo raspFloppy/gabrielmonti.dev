@@ -5,6 +5,10 @@ build/
 dist/
 wheels/
 *.egg-info
+site/
+__pycache__/
+.DS_Store
+
 
 # Virtual environments
-.venv
+.venv/
